@@ -1,11 +1,9 @@
-import { Button } from './components/ui/button'
+import TodoList from './components/todo-list'
 
 function App() {
 	return (
-		<main>
-			<h1 className="text-3xl font-bold underline">
-				<Button>Click me</Button>
-			</h1>
+		<main className="flex justify-center p-20">
+			<TodoList />
 		</main>
 	)
 }
