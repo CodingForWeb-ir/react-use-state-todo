@@ -36,7 +36,11 @@ export default function TodoComposer({
 				className="bg-slate-100 w-full placeholder:italic"
 				placeholder="Add a new todo..."
 			/>
-			<Button onClick={handleAddTodoClick} variant="link" disabled={label.length === 0}>
+			<Button
+				onClick={handleAddTodoClick}
+				variant="link"
+				disabled={label.length === 0}
+			>
 				Add Todo
 			</Button>
 		</li>

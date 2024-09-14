@@ -27,7 +27,11 @@ export default function TodoItem({
 	return (
 		<li>
 			<Label htmlFor={todo.id} className="flex gap-1 items-center">
-				<Checkbox checked={todo.isCompleted} id={todo.id} onCheckedChange={handleCheckboxClick} />
+				<Checkbox
+					checked={todo.isCompleted}
+					id={todo.id}
+					onCheckedChange={handleCheckboxClick}
+				/>
 				{editing ? (
 					<input
 						type="text"
@@ -36,13 +40,23 @@ export default function TodoItem({
 						className="bg-slate-100"
 					/>
 				) : (
-					<span className={todo.isCompleted ? 'line-through' : ''}>{todo.label}</span>
+					<span className={todo.isCompleted ? 'line-through' : ''}>
+						{todo.label}
+					</span>
 				)}
 			</Label>
-			<Button variant="link" onClick={handleEditClick} className="text-xs text-slate-500 ml-auto">
+			<Button
+				variant="link"
+				onClick={handleEditClick}
+				className="text-xs text-slate-500 ml-auto"
+			>
 				{editing ? 'Save' : 'Edit'}
 			</Button>
-			<Button variant="link" onClick={handleDeleteClick} className="text-xs text-slate-500">
+			<Button
+				variant="link"
+				onClick={handleDeleteClick}
+				className="text-xs text-slate-500"
+			>
 				Delete
 			</Button>
 		</li>

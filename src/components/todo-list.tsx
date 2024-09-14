@@ -17,7 +17,9 @@ export default function TodoList() {
 	])
 
 	const handleUpdateTodo = (updatedTodo: Todo) => {
-		setTodos(todos.map(todo => (todo.id === updatedTodo.id ? updatedTodo : todo)))
+		setTodos(
+			todos.map(todo => (todo.id === updatedTodo.id ? updatedTodo : todo)),
+		)
 	}
 
 	const handleDeleteTodo = (id: string) => {
@@ -31,7 +33,7 @@ export default function TodoList() {
 	return (
 		<>
 			<h1 className="text-3xl font-bold">Todo List</h1>
-			<ul className="space-y-2 w-full max-w-xl">
+			<ul className="space-y-2 w-full">
 				<TodoComposer handleAddTodo={handleAddTodo} />
 				{todos.map(todo => (
 					<TodoItem
